@@ -6,6 +6,7 @@ public class BallMovement : MonoBehaviour
 {
     private Rigidbody2D rig; 
     public Vector2 speed; 
+    public Vector2 resetposition;
 
     private void Start() 
     { 
@@ -13,7 +14,10 @@ public class BallMovement : MonoBehaviour
         rig.velocity = speed;
     } 
  
-
+    public void ResetBall()
+    {
+        transform.position = new Vector3(resetposition.x, resetposition.y);
+    }
     // Update is called once per frame
     void Update()
     {
