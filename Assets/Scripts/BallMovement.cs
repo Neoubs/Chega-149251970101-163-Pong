@@ -17,6 +17,13 @@ public class BallMovement : MonoBehaviour
     public void ResetBall()
     {
         transform.position = new Vector3(resetposition.x, resetposition.y);
+        
+    }
+
+    public void ActivatePUSpeedUp(float magnitude)
+    {
+        rig.velocity *= magnitude;
+
     }
     // Update is called once per frame
     void Update()
